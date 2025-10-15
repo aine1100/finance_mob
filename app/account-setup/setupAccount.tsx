@@ -2,7 +2,7 @@ import { StyleSheet, Image,Text, View, StatusBar, TouchableOpacity } from "react
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 
-export default function SuccessLogin() {
+export default function SetupAccount() {
     const router = useRouter()
 
     return (
@@ -10,16 +10,16 @@ export default function SuccessLogin() {
             <StatusBar hidden={false} barStyle='dark-content' translucent={true} backgroundColor="transparent" />
             <View style={styles.content}>
                 <View style={styles.iconWrap}>
-                    <Image source={require('../../assets/images/success.svg')} />
+                    <Image source={require('../../assets/get/rocket.svg')} />
                 </View>
                 <View style={styles.textWrap}>
-                    <Text style={styles.hi}>Hi! <Text style={styles.name}>John</Text></Text>
-                    <Text style={styles.welcome}>Welcome to Brees</Text>
+                    <Text style={styles.hi}>Let’s get your account set up!</Text>
+                    <Text style={styles.welcome}>Account can be your bank, credit  card or your digital wallet.</Text>
                 </View>
             </View>
 
             <View style={styles.bottomBar}>
-                <TouchableOpacity style={styles.primaryBtn} activeOpacity={0.9} onPress={() => router.replace('/auth/getStarted')}>
+                <TouchableOpacity style={styles.primaryBtn} activeOpacity={0.9} onPress={() => router.replace('/auth/login')}>
                     <Text style={styles.primaryBtnText}>Let’s get started</Text>
                 </TouchableOpacity>
             </View>
@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     hi: {
-        fontSize: 22,
-        fontWeight: '600',
+        fontSize: 24,
+        fontWeight: '700',
         color: '#240F51',
         textAlign: 'center'
     },
@@ -59,9 +59,9 @@ const styles = StyleSheet.create({
     },
     welcome: {
         marginTop: 6,
-        fontSize: 20,
-        fontWeight: '600',
-        color: '#240F51',
+        fontSize: 14,
+        fontWeight: '400',
+        color: '#292B2D',
         textAlign: 'center'
     },
     bottomBar: {

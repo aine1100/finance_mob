@@ -2,7 +2,7 @@ import { StyleSheet, Image,Text, View, StatusBar, TouchableOpacity } from "react
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 
-export default function SuccessLogin() {
+export default function VerifyEmail() {
     const router = useRouter()
 
     return (
@@ -10,17 +10,17 @@ export default function SuccessLogin() {
             <StatusBar hidden={false} barStyle='dark-content' translucent={true} backgroundColor="transparent" />
             <View style={styles.content}>
                 <View style={styles.iconWrap}>
-                    <Image source={require('../../assets/images/success.svg')} />
+                    <Image source={require('../../assets/get/mail.svg')} />
                 </View>
                 <View style={styles.textWrap}>
-                    <Text style={styles.hi}>Hi! <Text style={styles.name}>John</Text></Text>
-                    <Text style={styles.welcome}>Welcome to Brees</Text>
+                    <Text style={styles.hi}>Your email is on the way</Text>
+                    <Text style={styles.welcome}>Check your email test@test.com and follow the instructions to reset your password</Text>
                 </View>
             </View>
 
             <View style={styles.bottomBar}>
-                <TouchableOpacity style={styles.primaryBtn} activeOpacity={0.9} onPress={() => router.replace('/auth/getStarted')}>
-                    <Text style={styles.primaryBtnText}>Let’s get started</Text>
+                <TouchableOpacity style={styles.primaryBtn} activeOpacity={0.9} onPress={() => router.replace('/account-setup/getStarted')}>
+                    <Text style={styles.primaryBtnText}>Continue</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     hi: {
-        fontSize: 22,
-        fontWeight: '600',
+        fontSize: 24,
+        fontWeight: '700',
         color: '#240F51',
         textAlign: 'center'
     },
@@ -59,9 +59,9 @@ const styles = StyleSheet.create({
     },
     welcome: {
         marginTop: 6,
-        fontSize: 20,
-        fontWeight: '600',
-        color: '#240F51',
+        fontSize: 14,
+        fontWeight: '400',
+        color: '#292B2D',
         textAlign: 'center'
     },
     bottomBar: {
